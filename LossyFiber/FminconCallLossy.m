@@ -33,8 +33,6 @@ xinit=results(1:end-1);
         'TolX',1e-14,'MaxFunEvals',100000);
     [v, TpTilde] = fmincon(@(x) Lossy_Func_TpTilde(x,alpha, beta2, gamma,L,PSWFs,Tw,E,Factor,epsilon), xinit, [], [], [], ...
                     [], -1*ones(1,N/2)/Factor, ones(1,N/2)/Factor, 'const12',OPTIONS);
-%     v=xinit;
-%     TpTilde=Lossy_Func_TpTilde(v,alpha,beta2, gamma,L,PSWFs,Tw,E,Factor)
 %save results
 if (sum(v.^2.*(1-Lambdas(1:length(v))))>epsilon*sum(v.^2))
     TpTilde=NaN
