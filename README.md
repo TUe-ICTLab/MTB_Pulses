@@ -17,4 +17,4 @@ The folder 'DispersionOnly' contains the matlab functions and results for the di
 
 The folder 'data' contains the used prolate spheroidal wave functions (PSWFs) and their eigenvalues, 
 we obtained them using the software in:
-R. Adelman, N. A. Gumerov, and R. Duraiswami, ?Software for Computing the Spheroidal Wave Functions Using Arbitrary Precision Arithmetic,? arXiv preprint arXiv:1408.0074, Aug. 2014.
+R. Adelman, N. A. Gumerov, and R. Duraiswami, "Software for Computing the Spheroidal Wave Functions Using Arbitrary Precision Arithmetic," arXiv preprint arXiv:1408.0074, Aug. 2014.
