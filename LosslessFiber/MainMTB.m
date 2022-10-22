@@ -19,7 +19,7 @@ UseParallelCluster=0; % flag: 0 to use sequential for loop, 1 to use the paralle
 if(UseParallelCluster==1)
     ParCluster = parcluster();
     job1 = createJob(ParCluster);
-    for iter=length(Evec):length(Evec)
+    for iter=1:length(Evec)
         createTask(job1, @FminconCallLossless, 0, {cp, N, Evec(iter), TpVec(iter),beta2,gamma,L,epsilon });
     end
     submit(job1);
