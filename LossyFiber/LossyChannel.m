@@ -8,8 +8,9 @@ function [Yout] = LossyChannel(Yin, t, alpha, beta2,gamma,L)
 %         L:     fiber length
 % Output: Yout:  received signal at distance L
 %Y. Jaffal and A. Alvarado, Oct. 2022
-precision = @(x)double(x); 
-dataFunc = @(x)gpuArray(precision(x));
+
+%precision = @(x)double(x); 
+%dataFunc = @(x)gpuArray(precision(x));
 NLphiMax=0.005;
 zcum=0;
 stop=0;
@@ -18,8 +19,10 @@ dz=NLphiMax/(gamma*PeakPow);
 
 M=length(Yin);
 dt=t(2)-t(1);
-Fvec=dataFunc(linspace(-1/(2*dt),1/(2*dt),M));
-Yout=dataFunc(Yin);
+%Fvec=dataFunc(linspace(-1/(2*dt),1/(2*dt),M));
+%Yout=dataFunc(Yin);
+Fvec=linspace(-1/(2*dt),1/(2*dt),M);
+Yout=Yin;
 
 
 while ~stop
