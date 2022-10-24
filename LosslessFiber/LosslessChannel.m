@@ -11,15 +11,16 @@ function [Yout] = LosslessChannel(Yin, t, beta2,gamma,L)
 NLphiMax=0.005;
 zcum=0;
 stop=0;
-precision = @(x)double(x); 
-dataFunc = @(x)gpuArray(precision(x));
-Yin=dataFunc(Yin);
+%precision = @(x)double(x);
+%dataFunc = @(x)gpuArray(precision(x));
+%Yin=dataFunc(Yin);
 PeakPow=max(sum(abs(Yin).^2));
 dz=NLphiMax/(gamma*PeakPow);
 
 M=length(Yin);
 dt=t(2)-t(1);
-Fvec=dataFunc(linspace(-1/(2*dt),1/(2*dt),M));
+%Fvec=dataFunc(linspace(-1/(2*dt),1/(2*dt),M));
+Fvec=linspace(-1/(2*dt),1/(2*dt),M);
 Yout=Yin;
 
 
