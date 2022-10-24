@@ -8,11 +8,11 @@ figure(7);
 scatter([0.01],[285.56]);
 % plot the results of MTB, lossless
 fprintf('Plotting the MTB results for Lossless fiber...\n');
-cd LosslessFiber\;
+cd LosslessFiber;
 Lossless_Results_Part_of_Fig7;
 cd ..
 % plot the results of MTB, lossy
-cd LossyFiber\
+cd LossyFiber;
 fprintf('Plotting the MTB results for Lossy fiber...\n');
 Lossy_Results_Part_of_Fig7
 cd ..;
