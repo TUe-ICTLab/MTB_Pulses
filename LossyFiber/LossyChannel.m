@@ -14,7 +14,8 @@ function [Yout] = LossyChannel(Yin, t, alpha, beta2,gamma,L)
 NLphiMax=0.005;
 zcum=0;
 stop=0;
-PeakPow=dataFunc(max(sum(abs(Yin).^2)));
+%PeakPow=dataFunc(max(sum(abs(Yin).^2)));
+PeakPow=max(sum(abs(Yin).^2));
 dz=NLphiMax/(gamma*PeakPow);
 
 M=length(Yin);
