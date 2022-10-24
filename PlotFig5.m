@@ -5,7 +5,7 @@
 close all;
 figure(5);
 % plot the result of MTB, dispersion-only
-cd DispersionOnly\;
+cd DispersionOnly;
 DispersionOnly_Results_Fig5;
 cd ..
 legend('$T_{\tilde{p}^*}$', '$T_{\tilde{p}}=T_p$', 'interpreter', 'latex')
