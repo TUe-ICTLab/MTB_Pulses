@@ -5,6 +5,6 @@
 close all;
 figure(6);
 % plot the result of MTB, dispersion-only
-cd DispersionOnly\;
+cd DispersionOnly;
 DispersionOnly_Results_Fig6;
 cd ..
